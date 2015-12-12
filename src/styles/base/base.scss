@@ -1,0 +1,63 @@
+html,
+body {
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    color: $grey_absolute;
+
+    font-size: $font-size;
+    font-family: $font-default;
+    line-height: $line-height;
+
+    background-color: $yellow_regular;
+    background-size: cover;
+
+    -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+::selection {
+
+}
+
+input {
+    &:-ms-clear {
+        display: none;
+    }
+}
+select {
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+.invalid {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    color: $red_regular;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    &[name='position'] {
+        ~ label {
+            position: static;
+            margin-left: 6%;
+        }
+    }
+}
+.hidden {
+    display: none;
+}

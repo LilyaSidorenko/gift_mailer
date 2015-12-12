@@ -1,0 +1,81 @@
+.page-wrap {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    padding-bottom: 60px;
+
+    text-align: center;
+
+    @include clearfix;
+}
+
+.page-col-50 {
+    position: relative;
+
+    width: 50%;
+
+    &--l {
+        float: left;
+    }
+    &--r {
+        float: right;
+    }
+
+}
+
+.wrap-table {
+    display: table;
+
+    &--center {
+        margin: 0 auto;
+    }
+    &__cell {
+        display: table-cell;
+
+        height: 100%;
+        height: 100vh;
+
+        vertical-align: middle;
+    }
+}
+
+.wrap-col-c {
+    margin-right: 180px;
+
+    text-align: center;
+}
+
+.wrap-col-l {
+    margin-left: 130px;
+
+    text-align: left;
+}
+
+.wrap-float-r {
+    float: right;
+}
+
+@include media-breakpoint('phone') {
+    .page-wrap {
+        min-height: 100%;
+        height: auto;
+    }
+    .page-col-50 {
+        width: 100%;
+    }
+    .wrap-col-l,
+    .wrap-col-c {
+        margin: 0;
+        padding: 20px;
+    }
+    .wrap-table {
+        width: 100%;
+        padding-top: 20px;
+
+        &__cell {
+            height: auto;
+        }
+    }
+}

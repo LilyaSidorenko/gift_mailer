@@ -1,0 +1,20 @@
+.title-special {
+    display: inline-block;
+
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    font-size: 48px;
+    font-family: $font-normal;
+    letter-spacing: 4px;
+
+    color: $grey_absolute;
+    white-space: nowrap;
+}
+
+@include media-breakpoint('phone') {
+
+    .title-special {
+        font-size: 30px;
+    }
+}

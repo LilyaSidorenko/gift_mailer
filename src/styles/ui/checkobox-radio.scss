@@ -1,0 +1,77 @@
+
+%checkbox-radio-active {
+
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+
+        width: 20px;
+        height: 20px;
+        background: url("../../src/images/checkbox--checked.png");
+        background-size: cover;
+        border: none;
+    }
+}
+
+.checkbox-radio {
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-left: 11px;
+    line-height: 1.3;
+
+    input[type="radio"] {
+        display: none;
+    }
+    label {
+        display: inline-block;
+        vertical-align: middle;
+
+        position: relative;
+        cursor: pointer;
+        color: $grey_absolute;
+        @extend %transition;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+
+            width: 18px;
+            height: 18px;
+            margin-right: 7px;
+
+            border: 1px solid $grey_absolute;
+            border-radius: 50%;
+        }
+    }
+    input[type="radio"]:checked {
+        ~ label {
+            @extend %checkbox-radio-active;
+            font-weight: bold;
+        }
+    }
+}
+
+@include media-breakpoint('phone') {
+    .checkbox-radio {
+        font-size: 25px;
+        margin-top: 20px;
+
+        label {
+            &:before {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        input[type="radio"]:checked {
+            ~ label {
+                &:before {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}

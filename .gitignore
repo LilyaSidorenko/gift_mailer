@@ -5,4 +5,5 @@
 # Your settings
 gift_mailer_static/.sass-cache/
 gift_mailer_static/node_modules/
+gift_mailer_static/.idea/
 

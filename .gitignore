@@ -3,7 +3,6 @@
 *.DS_Store
 
 # Your settings
-gift_mailer_static/src/
 gift_mailer_static/.sass-cache/
-gift_mailer_static/Gruntfile.js/
-gift_mailer_static/package.json/
+gift_mailer_static/node_modules/
+

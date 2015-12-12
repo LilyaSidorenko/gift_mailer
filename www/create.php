@@ -13,7 +13,8 @@ if ( !empty($_POST)) {
     $your_emailError = null;
 
 
-    $name = $_POST['name']; 
+    $name = $_POST['name'];
+    $name = $_POST['name'];
     $email = $_POST['email'];
     $your_email= $_POST['your_email'];
 
@@ -120,6 +121,7 @@ if ( !empty($_POST)) {
                 <tr>
                     <td style="padding: 30px 15px; background-color:#ffffff;box-shadow: 2px 2px 9px -1px rgba(0,0,0,0.18);">
                         <p style="color: #000000; font-size: 24px;">Привет, <?php $name ?></p><span style="font-size: 16px;"> С Наступающими Праздниками, ,  Ваш друг Дмитрий
+                        <p style="color: #000000; font-size: 24px;">Привет, $name</p><span style="font-size: 16px;"> С Наступающими Праздниками, Алина,  Ваш друг Дмитрий
 <a href="mailto:  style="color: #99b5a7; text-decoration:none">(dima@dima.com)</a><br>Рассказал(а) Вам, что он(а) мечтает получить на Новый год.<br>И оставвил(а) для Вас пожелание!</span>
 
                         <div style="padding:60px 0 20px 0"><a href=""
@@ -132,9 +134,10 @@ if ( !empty($_POST)) {
         </td>
     </tr>
     </tbody>
-</table> 
-</body>';
+</table>
         mail($email,$subject , $message,
+</body>';
+        mail("$email", $message, "$name, кому то интересно шо ты хочешь $link",
             "From: party@shurov-studio.biz.ua");
     }
     ?>

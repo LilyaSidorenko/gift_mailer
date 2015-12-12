@@ -1,0 +1,3 @@
+[submodule "gift_mailer_static"]
+	path = gift_mailer_static
+	url = https://github.com/LilyaSidorenko/gift_mailer_static.git

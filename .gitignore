@@ -1,0 +1,6 @@
+*.idea
+*.iml
+*.DS_Store
+
+# Your settings
+gift_mailer_static
